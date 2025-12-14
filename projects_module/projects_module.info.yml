@@ -1,0 +1,9 @@
+name: 'Projects Module'
+type: module
+description: 'Модуль для управления проектами'
+package: 'Custom'
+core_version_requirement: ^8 || ^9 || ^10
+dependencies:
+  - drupal:node
+  - drupal:image
+  - drupal:datetime

@@ -1,0 +1,4 @@
+latest_projects_block:
+  css:
+    theme:
+      css/projects_module.css: {}

@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Основной файл модуля Projects Module.
+ */
+
+/**
+ * Implements hook_help().
+ */
+function projects_module_help($route_name, \Drupal\Core\Routing\RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.projects_module':
+      $output = '';
+      $output .= '<h3>' . t('Projects Module') . '</h3>';
+      $output .= '<p>' . t('Модуль для создания и отображения проектов.') . '</p>';
+      $output .= '<p>' . t('Функции:') . '</p>';
+      $output .= '<ul>';
+      $output .= '<li>' . t('Тип контента "Проект"') . '</li>';
+      $output .= '<li>' . t('Блок с последними проектами') . '</li>';
+      $output .= '</ul>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function projects_module_theme() {
+  return [
+    'latest_projects_block' => [
+      'variables' => ['projects' => []],
+    ],
+  ];
+}
